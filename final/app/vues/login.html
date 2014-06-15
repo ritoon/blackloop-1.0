@@ -1,0 +1,17 @@
+{{ define "login" }}
+{{template "header" .}}
+<!--login-->
+<form class="pure-form">
+    <fieldset>
+        <legend>Veuillez vous logger</legend>
+
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button type="submit" class="pure-button pure-button-primary">Connexion</button>
+
+    </fieldset>
+</form>
+<!--end login-->
+{{template "footer" .}}
+{{ end }}

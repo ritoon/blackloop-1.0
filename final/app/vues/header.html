@@ -1,0 +1,33 @@
+{{ define "header" }}
+<!doctype html>
+<!--header-->
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{.TitrePage}}</title>
+
+    <link rel="stylesheet" href="/css/pure-min.css">
+
+</head>
+<body>
+
+<div class="pure-menu pure-menu-open pure-menu-horizontal">
+	
+    <ul>
+        <li><a href="/">Liste des cocktails</a></li>
+        {{if .SessIsLogged}}
+        <li><a href="/connexion/">Connexion</a></li>
+        {{else}}
+        <li>Bonjour {{.SessNameUser}}<li>
+        <li><a href="/produit/ajouter/">Ajouter un cocktail</a></li>
+        <li><a href="/deconnexion/">Deconnexion</a></li>
+    	{{end}}
+    </ul>
+    
+</div>
+
+	<div id="content">
+<!--end header-->
+{{ end }}

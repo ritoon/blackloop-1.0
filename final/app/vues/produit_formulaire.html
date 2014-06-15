@@ -1,0 +1,25 @@
+{{ define "produit_formulaire" }}
+{{template "header" .}}
+<!--produit_formulaire-->
+
+<form class="pure-form pure-form-stacked" action="" method="post">
+    <fieldset>
+        
+        <img src="{{.Produit.UrlImage}}">
+
+        <input class="pure-input-1-2" type="text" placeholder="Titre" name="titre" value="{{.Produit.Titre}}">
+
+        <textarea rows="10" cols="50" name="description">{{.Produit.Description}}</textarea>
+        
+        <input class="pure-input-1-2" type="text" placeholder="url de l'image" name="url_image" value="{{.Produit.UrlImage}}">
+
+        <button type="submit" class="button-success pure-button">Enregistrer</button>
+
+        <a href="/produit/supprimer/{{.Id}}/"  class="button-error pure-button">Supprimer</a>
+    </fieldset>
+</form>
+
+<!--end produit_formulaire-->
+{{template "footer" .}}
+{{ end }}
+

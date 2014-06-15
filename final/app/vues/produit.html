@@ -1,0 +1,11 @@
+{{ define "produit" }}
+{{template "header" .}}
+<!--produit-->
+<img src="{{.UrlImage}}">
+<h1>{{.Titre}}</h1>
+<p>{{.Description}}</p>
+<a href="/produit/editer/{{.Id}}/"  class="button-warning pure-button">Editer</a>
+
+<!--end produit-->
+{{template "footer" .}}
+{{ end }}

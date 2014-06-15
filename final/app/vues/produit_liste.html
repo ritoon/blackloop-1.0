@@ -1,0 +1,24 @@
+{{ define "produit_liste" }}
+{{template "header" .}}
+<!--produit_liste-->
+
+<h1>Liste des cocktails</h1>
+
+{{range .Produits}}
+		
+		<div class="produit">
+
+		<h2><a href="/produit/{{.Id}}/">{{.Titre}}</a></h2>
+
+	    <a href="/produit/{{.Id}}/">
+	        <img src="{{.UrlImage}}">
+	    </a>
+	    
+		</div>
+
+{{end}}
+
+<!--produit_liste-->
+{{template "footer" .}}
+{{ end }}
+
